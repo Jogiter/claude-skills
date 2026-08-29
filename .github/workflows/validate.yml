@@ -1,0 +1,32 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 单元测试
+        run: node --test scripts/*.test.mjs
+
+      - name: 项目约定校验
+        run: node scripts/validate-skills.mjs
+
+      # 官方校验器在仓库根只覆盖 marketplace.json，plugin.json 需显式指定路径；
+      # skills 完全不在其覆盖范围内，由上一步的脚本保证。
+      # 需要 claude CLI，安装依赖外部脚本，失败不阻塞 CI，结果看日志。
+      - name: 官方校验器（尽力而为）
+        continue-on-error: true
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          "$HOME/.local/bin/claude" plugin validate . --strict
+          "$HOME/.local/bin/claude" plugin validate .claude-plugin/plugin.json --strict
