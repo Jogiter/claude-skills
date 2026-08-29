@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "jogiter",
+  "owner": {
+    "name": "Jogiter",
+    "email": "jogiter.g@gmail.com"
+  },
+  "metadata": {
+    "description": "Jogiter 的个人 skill market",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "jogiter-skills",
+      "source": "./",
+      "description": "写作、研究与工程实践类个人 skills 集合",
+      "version": "1.0.0",
+      "author": { "name": "Jogiter" },
+      "keywords": ["writing", "skills", "productivity"],
+      "category": "workflow"
+    }
+  ]
+}

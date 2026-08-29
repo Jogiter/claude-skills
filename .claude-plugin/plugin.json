@@ -1,0 +1,13 @@
+{
+  "name": "jogiter-skills",
+  "description": "写作、研究与工程实践类个人 skills 集合",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jogiter",
+    "url": "https://github.com/Jogiter"
+  },
+  "homepage": "https://github.com/Jogiter/claude-skills",
+  "repository": "https://github.com/Jogiter/claude-skills",
+  "license": "MIT",
+  "keywords": ["writing", "skills", "productivity"]
+}
