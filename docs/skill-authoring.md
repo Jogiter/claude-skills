@@ -22,7 +22,7 @@ license: MIT
 ---
 ```
 
-三个字段都是必需的，由 `scripts/validate-skills.mjs` 强制校验。
+`name` 与 `description` 两个字段由 `scripts/validate-skills.mjs` 强制校验（校验 name 是否等于目录名、description 是否非空）；`license` 是仓库约定，脚本不检查它，但仍应据实填写。
 
 ### description 怎么写
 

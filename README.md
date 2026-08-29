@@ -37,10 +37,11 @@ claude plugin install jogiter-skills@jogiter --yes --scope project
 
 ```bash
 git clone https://github.com/Jogiter/claude-skills.git
+mkdir -p ~/.claude/skills
 cp -r claude-skills/skills/integrated-writing-style ~/.claude/skills/
 ```
 
-拷贝到项目内的 `.claude/skills/` 则只对该项目生效。
+拷贝到项目内的 `.claude/skills/` 则只对该项目生效，同样先 `mkdir -p .claude/skills` 再拷贝。
 
 安装后需重启 Claude Code 会话才能加载。
 

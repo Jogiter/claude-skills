@@ -26,6 +26,7 @@ jobs:
       # 需要 claude CLI，安装依赖外部脚本，失败不阻塞 CI，结果看日志。
       - name: 官方校验器（尽力而为）
         continue-on-error: true
+        timeout-minutes: 5
         run: |
           curl -fsSL https://claude.ai/install.sh | bash
           "$HOME/.local/bin/claude" plugin validate . --strict

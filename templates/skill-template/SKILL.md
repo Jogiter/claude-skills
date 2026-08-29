@@ -1,6 +1,7 @@
 ---
 name: skill-template
-description: 一句话说明这个 skill 做什么，以及什么时候用它。必须包含触发条件，例如「当用户要求 X 或提到 Y 时使用」。这一行决定 skill 能否被自动召回，是整个 skill 最关键的一行。
+# 一句话说明这个 skill 做什么，以及什么时候用它。必须包含触发条件，例如「当用户要求 X 或提到 Y 时使用」。这一行决定 skill 能否被自动召回，是整个 skill 最关键的一行。
+description:
 license: MIT
 ---
 

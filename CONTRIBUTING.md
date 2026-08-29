@@ -21,6 +21,8 @@
    claude plugin validate .claude-plugin/plugin.json --strict
    ```
 
+   后两条依赖 `claude` CLI，且只校验 plugin/marketplace 清单文件，不检查 skill 本身；没装 CLI 就先跑前两条，一样能确认改动没破坏约定。
+
 5. 按下面的版本约定 bump 版本，更新 README 的 skill 清单表，提交并发布。
 
 **不需要改任何 JSON 文件** —— `skills/` 目录由 Claude Code 自动发现。
